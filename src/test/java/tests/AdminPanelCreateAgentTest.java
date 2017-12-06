@@ -1,6 +1,6 @@
 package tests;
 
-import constants.DefaultNewAgentConstants;
+import constants.TestData;
 import features.AdminLogin;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -12,20 +12,19 @@ public class AdminPanelCreateAgentTest extends AdminLogin {
     public Number randomS = (int) (Math.random() * 10000);
     public String emailGenerator = new String();
 
-    private String firstName = DefaultNewAgentConstants.FIRST_NAME;
-    private String lastName = DefaultNewAgentConstants.LAST_NAME;
-    private String password = DefaultNewAgentConstants.DEFAULT_PASSWORD;
-    private String licenseNumber = DefaultNewAgentConstants.LICENSE_NUMBER;
-    private String phone = DefaultNewAgentConstants.PHONE_NUMBER;
-    private String education = DefaultNewAgentConstants.EDUCATION;
-    private String company = DefaultNewAgentConstants.COMPANY;
-    private String website = DefaultNewAgentConstants.WEBSITE;
-    private String bio = DefaultNewAgentConstants.BIO;
+    private String firstName = TestData.CreateAgent.FIRST_NAME;
+    private String lastName = TestData.CreateAgent.LAST_NAME;
+    private String password = TestData.CreateAgent.DEFAULT_PASSWORD;
+    private String licenseNumber = TestData.CreateAgent.LICENSE_NUMBER;
+    private String phone = TestData.CreateAgent.PHONE_NUMBER;
+    private String education = TestData.CreateAgent.EDUCATION;
+    private String company = TestData.CreateAgent.COMPANY;
+    private String website = TestData.CreateAgent.WEBSITE;
 
     @Test
     public void adminCreateNewAgent() {
         //generate random mail
-        emailGenerator = "autotest" + randomS.toString() + DefaultNewAgentConstants.EMAIL_ENDING;
+        emailGenerator = "autotest" + randomS.toString() + TestData.CreateAgent.EMAIL_ENDING;
 
         //go to "create agent" page
         $(By.xpath("//*[@id='main-menu']/li[3]/a/i")).hover();

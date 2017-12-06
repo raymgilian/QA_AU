@@ -3,8 +3,7 @@ package constants;
 /**
  * Class contains common constants
  */
-public final class Constants
-{
+public final class Constants {
     //need to login
     public static final Boolean CLEAR_CACHE_EACH_TEST = false;
     public static final Boolean NEED_TO_RELOGIN = false;
@@ -17,7 +16,6 @@ public final class Constants
     //todo: make function
 
 
-
     //advantageu site locations
     public static final String SITE_AU_ADRESS = "https://advantageu.realagentpro.com";
     public static final String SITE_AU_ADMIN_SUBADRESS = "/admin";
@@ -26,8 +24,7 @@ public final class Constants
     public static final String SITE_AU_ADMIN_LOGIN = "superadmin@advantageu.com";
     public static final String SITE_AU_ADMIN_PASSWORD = "h}*,VC(T]bVW/=r]";
 
-    private Constants()
-    {
+    private Constants() {
         //nothing. Constant archive class.
     }
 }

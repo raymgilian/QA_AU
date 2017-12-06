@@ -1,22 +1,16 @@
 package tests;
 
-import com.codeborne.selenide.Condition;
 import constants.DefaulNewPropertyConstants;
 import features.AdminLogin;
-import org.junit.Ignore;
 import org.junit.Test;
+import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
-import com.codeborne.selenide.Selenide;
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.sleep;
 
-import org.openqa.selenium.By;
-
-public class AdminPanelCreatePropertyTest extends AdminLogin
-{
+public class AdminPanelCreatePropertyTest extends AdminLogin {
     private String chooseClientPreData = DefaulNewPropertyConstants.CHOOSE_CLIENT_PRE_DATA;
     private String chooseClientDataMail = DefaulNewPropertyConstants.CHOOSE_CLIENT_DATA_MAIL;
     private String chooseClientData = DefaulNewPropertyConstants.CHOOSE_CLIENT_DATA;
@@ -40,8 +34,7 @@ public class AdminPanelCreatePropertyTest extends AdminLogin
 
 
     @Test
-    public void adminCreateNewProperty()
-    {
+    public void adminCreateNewProperty() {
         $(By.xpath("//*[@id=\"main-menu\"]/li[5]/a")).hover();
         $(By.xpath("//*[@id=\"main-menu\"]/li[5]/ul/li[2]/a")).click();
 
@@ -57,8 +50,7 @@ public class AdminPanelCreatePropertyTest extends AdminLogin
         $(By.id("transactioninfo-mls")).setValue(mls);
         $(By.id("transactioninfo-mls_number")).setValue(mlsNumber);
 
-        if(active)
-        {
+        if (active) {
             $(By.id("transaction-status")).click();
         }
 
@@ -78,7 +70,7 @@ public class AdminPanelCreatePropertyTest extends AdminLogin
         $(By.id("property-baths")).setValue(baths);
         //increase
         for (int i = globalI; i >= 0; i--)
-            $(By.xpath("//*[@id=\"property-form\"]/div[4]/div[5]/div[1]/div[1]/div[3]")).click(5,5);
+            $(By.xpath("//*[@id=\"property-form\"]/div[4]/div[5]/div[1]/div[1]/div[3]")).click(5, 5);
         //decrease
         for (int i = globalI; i >= 0; i--)
             $(By.xpath("//*[@id=\"property-form\"]/div[4]/div[5]/div[1]/div[1]/div[2]")).click();
@@ -103,7 +95,6 @@ public class AdminPanelCreatePropertyTest extends AdminLogin
         $(By.cssSelector("body > div.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom > div.datepicker-days > table > tbody > tr:nth-child(2) > td:nth-child(4)")).click();
 
         $(By.cssSelector("#property-form > div.row > div > div > input")).click();
-
 
 
         //and Test Results

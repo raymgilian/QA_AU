@@ -1,24 +1,17 @@
 package tests;
 
-import com.codeborne.selenide.SelenideElement;
 import constants.DefaultNewAgentConstants;
 import features.AdminLogin;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.value;
+import static com.codeborne.selenide.Selenide.$;
 
-public class AdminPanelCreateAgentTest extends AdminLogin
-{
-    public Number randomS = (int)(Math.random() * 10000);
+public class AdminPanelCreateAgentTest extends AdminLogin {
+    public Number randomS = (int) (Math.random() * 10000);
     public String emailGenerator = new String();
 
-    private String emailEnding = DefaultNewAgentConstants.EMAIL_ENDING;
     private String firstName = DefaultNewAgentConstants.FIRST_NAME;
     private String lastName = DefaultNewAgentConstants.LAST_NAME;
     private String password = DefaultNewAgentConstants.DEFAULT_PASSWORD;
@@ -30,13 +23,12 @@ public class AdminPanelCreateAgentTest extends AdminLogin
     private String bio = DefaultNewAgentConstants.BIO;
 
     @Test
-    public void adminCreateNewAgent()
-    {
+    public void adminCreateNewAgent() {
         //generate random mail
-        emailGenerator = "autotest" + randomS.toString() + emailEnding;
+        emailGenerator = "autotest" + randomS.toString() + DefaultNewAgentConstants.EMAIL_ENDING;
 
         //go to "create agent" page
-        $(By.xpath("//*[@id=\"main-menu\"]/li[3]/a/i")).hover();
+        $(By.xpath("//*[@id='main-menu']/li[3]/a/i")).hover();
         $(By.xpath("//*[@id=\"main-menu\"]/li[3]/ul/li[2]/a/span")).click();
 
 

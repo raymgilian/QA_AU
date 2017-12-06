@@ -1,7 +1,6 @@
 package constants;
 
-public class DefaulNewPropertyConstants
-{
+public class DefaulNewPropertyConstants {
     //advantageu new property data
     public static final String CHOOSE_CLIENT_PRE_DATA = "123";
     public static final String CHOOSE_CLIENT_DATA_MAIL = "123@235.3654";

@@ -1,21 +1,17 @@
 package core;
 
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
-
 import com.codeborne.selenide.Configuration;
-
 import com.codeborne.selenide.junit.ScreenShooter;
 import constants.Constants;
-import org.junit.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Rule;
 
-public class BaseTest
-{
+import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
+
+public class BaseTest {
     @BeforeClass
-    public static void setUp()
-    {
+    public static void setUp() {
         System.setProperty("selenide.browser", "chrome");
 
         //clear cache
@@ -25,11 +21,9 @@ public class BaseTest
     }
 
     @Before
-    public void eachTestSetUp()
-    {
+    public void eachTestSetUp() {
         //clear cache each test
-        if (Constants.CLEAR_CACHE_EACH_TEST)
-        {
+        if (Constants.CLEAR_CACHE_EACH_TEST) {
             clearBrowserCache();
         }
     }

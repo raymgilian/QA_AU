@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agent>
+    <email>@ukr.net</email>
+    <firstName>Auto</firstName>
+    <lastName>Test</lastName>
+    <password>qwerty</password>
+    <licenseNumber>666666666</licenseNumber>
+    <phoneNumber>(012)345-6789</phoneNumber>
+    <education>Ordo Templi Orientis</education>
+    <company>Malleus Maleficarum</company>
+    <website>uk.wikipedia.org</website>
+    <userStatus>true</userStatus>
+</agent>

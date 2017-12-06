@@ -23,6 +23,7 @@ public final class Constants {
     //credentials for AU admin
     public static final String SITE_AU_ADMIN_LOGIN = "superadmin@advantageu.com";
     public static final String SITE_AU_ADMIN_PASSWORD = "h}*,VC(T]bVW/=r]";
+    public static final Long TIMEOUT = 5000L;
 
     private Constants() {
         //nothing. Constant archive class.

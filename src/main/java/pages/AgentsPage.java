@@ -7,10 +7,12 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 
 public class AgentsPage extends BasicPage {
-    SelenideElement menuItem = $(By.xpath("//i[@class='el-adult']"));
+    private SelenideElement menuItem = $(By.xpath("//i[@class=\"el-adult\"]"));
+    private SelenideElement subMenuItem = $(By.xpath("//*[@id=\"main-menu\"]/li[3]/ul/li[2]/a/span"));
+
     public CreateAgentPage goToCreateAgentPage() {
         menuItem.hover();
-        $(By.xpath("//*[@id=\"main-menu\"]/li[3]/ul/li[2]/a/span")).click();
+        subMenuItem.click();
         return page(CreateAgentPage.class);
     }
 }

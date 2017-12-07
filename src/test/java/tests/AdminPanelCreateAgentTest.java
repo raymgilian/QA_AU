@@ -8,6 +8,7 @@ import pages.AdminLoginPage;
 import pages.AgentsPage;
 import pages.CreateAgentPage;
 
+import java.io.InputStream;
 import java.util.Random;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -16,7 +17,7 @@ public class AdminPanelCreateAgentTest extends BaseTest{
 
     @Test
     public void adminCreateNewAgent() {
-        Agent expectedAgent = Agent.getFromXml("/Users/artemkalantai/IdeaProjects/QA_AU/src/main/resources/agent.xml");
+        Agent expectedAgent = Agent.getFromXml("src/main/resources/agent.xml");
         String email = "autotest" + Long.toString(new Random().nextLong()) + expectedAgent.getEmail();
         expectedAgent.setEmail(email);
         AdminLoginPage adminLoginPage = open(Constants.SITE_AU_ADRESS

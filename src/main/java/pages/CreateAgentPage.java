@@ -46,5 +46,12 @@ public class CreateAgentPage extends BasicPage {
         emailInput.shouldBe(value(agent.getEmail()));
         firstNameInput.shouldBe(value(agent.getFirstName()));
         lastNameInput.shouldBe(value(agent.getLastName()));
+        //
+        passwordInput.shouldBe(value(agent.getPassword()));
+        licenseNumberInput.shouldBe(value(agent.getLicenseNumber()));
+        phoneNumberInput.shouldBe(value(agent.getPhoneNumber()));
+        educationInput.shouldBe(value(agent.getEducation()));
+        companyInput.shouldBe(value(agent.getCompany()));
+        websiteUrlInput.shouldBe(value(agent.getWebsite()));
     }
 }

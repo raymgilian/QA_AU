@@ -2,6 +2,7 @@ package tests;
 
 import constants.DefaulNewPropertyConstants;
 import features.AdminLogin;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
@@ -34,6 +35,7 @@ public class AdminPanelCreatePropertyTest extends AdminLogin {
 
 
     @Test
+    @Ignore
     public void adminCreateNewProperty() {
         $(By.xpath("//*[@id=\"main-menu\"]/li[5]/a")).hover();
         $(By.xpath("//*[@id=\"main-menu\"]/li[5]/ul/li[2]/a")).click();

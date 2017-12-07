@@ -8,7 +8,6 @@ import pages.AdminLoginPage;
 import pages.AgentsPage;
 import pages.CreateAgentPage;
 
-import java.io.InputStream;
 import java.util.Random;
 
 import static com.codeborne.selenide.Selenide.open;

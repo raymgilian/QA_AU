@@ -18,7 +18,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class AdminPanelCreateAgentTest extends BaseTest{
 
     @Test
-    @DisplayName("Fucking allure test")
+    //@DisplayName("some test name")
     @Description("Some fucking description")
     @Issue("JIRA-123")
     @TmsLink("jira-link")

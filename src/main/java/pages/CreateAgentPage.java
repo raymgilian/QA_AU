@@ -8,12 +8,13 @@ import org.openqa.selenium.By;
 
 import java.util.Random;
 
+import static com.codeborne.selenide.Condition.disappear;
 import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 
 public class CreateAgentPage extends BasicPage {
-    private SelenideElement emailInput = $(By.xpath("//*[@id=\"user-email\"]"));
+    private SelenideElement emailInput = $(By.id("user-email"));
     private SelenideElement firstNameInput = $(By.id("userprofile-first_name"));
     private SelenideElement lastNameInput = $(By.id("userprofile-last_name"));
     private SelenideElement passwordInput = $(By.id("user-password_hash"));
@@ -39,15 +40,14 @@ public class CreateAgentPage extends BasicPage {
             userStatus.click();
         }
         createButton.click();
+        emailInput.should(disappear);
         return page(this);
     }
 
     public void verifyCreatedAgent(Agent agent) {
-        emailInput.shouldBe(value(agent.getEmail()));
         firstNameInput.shouldBe(value(agent.getFirstName()));
         lastNameInput.shouldBe(value(agent.getLastName()));
         //
-        passwordInput.shouldBe(value(agent.getPassword()));
         licenseNumberInput.shouldBe(value(agent.getLicenseNumber()));
         phoneNumberInput.shouldBe(value(agent.getPhoneNumber()));
         educationInput.shouldBe(value(agent.getEducation()));

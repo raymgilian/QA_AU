@@ -14,8 +14,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 
 public class CreateAgentPage extends BasicPage {
-    private SelenideElement emailInput = $(By.id("user-email-11111"));
-    //private SelenideElement emailInput = $(By.id("user-email"));
+    private SelenideElement emailInput = $(By.id("user-email"));
     private SelenideElement firstNameInput = $(By.id("userprofile-first_name"));
     private SelenideElement lastNameInput = $(By.id("userprofile-last_name"));
     private SelenideElement passwordInput = $(By.id("user-password_hash"));
